@@ -1,5 +1,5 @@
 const area=document.querySelector('#game-area'),basket=document.querySelector('#basket'),overlay=document.querySelector('#overlay'),button=document.querySelector('#start-button'),scoreEl=document.querySelector('#score'),timeEl=document.querySelector('#time'),bestEl=document.querySelector('#best');
-const gameImages=['ảnh áo trắng.jpg','ảnh ssid.jpg','ảnh polo.jpg','áo xa lánh.jpg','cute vl.jpg'];
+const gameImages=['ảnh áo trắng.jpg','ảnh ssid.jpg','ảnh polo.jpg','áo xa lánh.jpg','cute vl.jpg','áo đen.jpg','con heo.jpg'];
 gameImages.forEach(source=>{const image=new Image();image.src=encodeURI(source);});
 let score=0,time=60,basketX=50,playing=false,stars=[],spawnTimer,gameTimer,animationId;let best=Number(localStorage.getItem('star-catcher-best')||0);bestEl.textContent=best;
 function moveBasket(percent){basketX=Math.max(6,Math.min(94,percent));basket.style.left=`${basketX}%`;}
